@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac054d9c-ae0f-475d-b375-fd13dc32d669" name="Default Changelist" comment="intial commit" />
+    <list default="true" id="ac054d9c-ae0f-475d-b375-fd13dc32d669" name="Default Changelist" comment="intial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bottom.html" beforeDir="false" afterPath="$PROJECT_DIR$/bottom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/careers.html" beforeDir="false" afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/marketing.html" beforeDir="false" afterPath="$PROJECT_DIR$/marketing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rnd.html" beforeDir="false" afterPath="$PROJECT_DIR$/rnd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/services.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628845675914</updated>
       <workItem from="1628845686625" duration="251000" />
-      <workItem from="1628846133328" duration="6086000" />
+      <workItem from="1628846133328" duration="6899000" />
     </task>
     <task id="LOCAL-00001" summary="intial commit">
       <created>1628857222216</created>
