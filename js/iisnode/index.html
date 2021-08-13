@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"WIN5219-11920-stderr-1628520231330.txt","computername":"WIN5219","pid":11920,"type":"stderr","created":1628520231330},{"file":"WIN5219-1284-stderr-1628579660516.txt","computername":"WIN5219","pid":1284,"type":"stderr","created":1628579660516},{"file":"WIN5219-16652-stderr-1628325573344.txt","computername":"WIN5219","pid":16652,"type":"stderr","created":1628325573344},{"file":"WIN5219-17744-stderr-1628502418847.txt","computername":"WIN5219","pid":17744,"type":"stderr","created":1628502418847},{"file":"WIN5219-2160-stderr-1628326168148.txt","computername":"WIN5219","pid":2160,"type":"stderr","created":1628326168148},{"file":"WIN5219-21744-stderr-1628502385190.txt","computername":"WIN5219","pid":21744,"type":"stderr","created":1628502385190},{"file":"WIN5219-22552-stderr-1628332422922.txt","computername":"WIN5219","pid":22552,"type":"stderr","created":1628332422922},{"file":"WIN5219-23068-stderr-1628502405596.txt","computername":"WIN5219","pid":23068,"type":"stderr","created":1628502405596},{"file":"WIN5219-24528-stderr-1628635541444.txt","computername":"WIN5219","pid":24528,"type":"stderr","created":1628635541444},{"file":"WIN5219-25824-stderr-1628579656594.txt","computername":"WIN5219","pid":25824,"type":"stderr","created":1628579656594},{"file":"WIN5219-30636-stderr-1628325568140.txt","computername":"WIN5219","pid":30636,"type":"stderr","created":1628325568140},{"file":"WIN5219-34304-stderr-1628635539349.txt","computername":"WIN5219","pid":34304,"type":"stderr","created":1628635539349},{"file":"WIN5219-41520-stderr-1628326168835.txt","computername":"WIN5219","pid":41520,"type":"stderr","created":1628326168835},{"file":"WIN5219-42964-stderr-1628502368096.txt","computername":"WIN5219","pid":42964,"type":"stderr","created":1628502368096},{"file":"WIN5219-43916-stderr-1628502376206.txt","computername":"WIN5219","pid":43916,"type":"stderr","created":1628502376206},{"file":"WIN5219-51364-stderr-1628520233032.txt","computername":"WIN5219","pid":51364,"type":"stderr","created":1628520233032},{"file":"WIN5219-51448-stderr-1628325567453.txt","computername":"WIN5219","pid":51448,"type":"stderr","created":1628325567453},{"file":"WIN5219-54356-stderr-1628502384175.txt","computername":"WIN5219","pid":54356,"type":"stderr","created":1628502384175},{"file":"WIN5219-55428-stderr-1628502375097.txt","computername":"WIN5219","pid":55428,"type":"stderr","created":1628502375097},{"file":"WIN5219-8916-stderr-1628325572687.txt","computername":"WIN5219","pid":8916,"type":"stderr","created":1628325572687},{"file":"WIN5219-9532-stderr-1628502369018.txt","computername":"WIN5219","pid":9532,"type":"stderr","created":1628502369018}];
+        var lastUpdated = 1628635541490;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
